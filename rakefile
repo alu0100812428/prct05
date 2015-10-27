@@ -1,0 +1,11 @@
+task :default => :tu
+
+desc "Pruebas unitarias de la clase Point"
+task :tu do
+  sh "ruby -I. test/tc_fraccionarios_1.rb"
+end
+
+desc "Comprobar la inicialización y el máximo comun divisor"
+task :inicio do
+  sh "ruby -I. test/tc_fraccionarios_1.rb -n /inicio/"
+end
