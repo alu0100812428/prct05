@@ -20,9 +20,10 @@ class Fraccionarios
     def to_s
         "#@num/#@denom"
     end
+    
     def -@
-	  Fraccionarios.new(-@num, @denom)
-	end
+        Fraccionarios.new(-@num, @denom)
+    end
     
     def +  (other)
         mcm= lcm(@denom,other.denom)
@@ -41,5 +42,9 @@ class Fraccionarios
     
     def * (other)
         Fraccionarios.new(@num * other.num,@denom * other.denom)
+    end
+    
+    def ** (value)
+        Fraccionarios.new(@num ** value,@denom ** value)
     end
 end

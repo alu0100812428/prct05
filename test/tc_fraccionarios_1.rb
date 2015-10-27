@@ -23,4 +23,7 @@ class TestFraccionarios < Test::Unit::TestCase
     assert_equal("1/2", (@f_3 / @f_1).to_s)
     assert_equal("1/16", (@f_3 * @f_3).to_s)
   end
+  def test_exp
+    assert_equal("1/16", (@f_3 ** 2).to_s)
+  end
 end

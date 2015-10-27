@@ -19,3 +19,8 @@ desc "Comprobar operaciones mínimas"
 task :operaciones do
   sh "ruby -I. test/tc_fraccionarios_1.rb -n /operaciones/"
 end
+
+desc "Comprobar exponente"
+task :exp do
+  sh "ruby -I. test/tc_fraccionarios_1.rb -n /exp/"
+end
