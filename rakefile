@@ -9,3 +9,13 @@ desc "Comprobar la inicialización y el máximo comun divisor"
 task :inicio do
   sh "ruby -I. test/tc_fraccionarios_1.rb -n /inicio/"
 end
+
+desc "Comprobar el minimo común multiplo"
+task :lcm do
+  sh "ruby -I. test/tc_fraccionarios_1.rb -n /lcm/"
+end
+
+desc "Comprobar operaciones mínimas"
+task :operaciones do
+  sh "ruby -I. test/tc_fraccionarios_1.rb -n /operaciones/"
+end

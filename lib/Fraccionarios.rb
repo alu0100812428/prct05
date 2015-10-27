@@ -13,7 +13,33 @@ class Fraccionarios
         y == 0 ? x: gcd(y, x%y)
     end
   
+    def lcm(x,y)
+        x / gcd(x,y) * y
+    end
+  
     def to_s
         "#@num/#@denom"
+    end
+    def -@
+	  Fraccionarios.new(-@num, @denom)
+	end
+    
+    def +  (other)
+        mcm= lcm(@denom,other.denom)
+        num_a= (@num * mcm / @denom)
+        num_b= (other.num * mcm / other.denom)
+        Fraccionarios.new( num_a + num_b, mcm )
+    end
+    
+    def - (other)
+        self + (-other)
+    end
+    
+    def / (other)
+        Fraccionarios.new(@num * other.denom,@denom * other.num)
+    end
+    
+    def * (other)
+        Fraccionarios.new(@num * other.num,@denom * other.denom)
     end
 end
